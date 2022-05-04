@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise API - all</title>
+</head>
+<body>
+    <script>
+        let p1 = new Promise((resolve,reject)=>{
+            resolve('ok')
+        })
+        let p2 = new Promise((resolve,reject)=>{
+            // resolve('sucess')
+            reject('Error')
+        })
+        let p3 = new Promise((resolve,reject)=>{
+            resolve('oh Yeah')
+        })
+        const result = Promise.all([p1,p2,p3])
+        console.log(result);
+    </script>
+</body>
+</html>
